@@ -10,8 +10,9 @@ export interface Project {
   githubStars?: string
   ratings?: string
   numberOfSales?: string
-  type: string
+  type?: string
   siteAge?: string
+ 
 }
 
 export interface Heading {
