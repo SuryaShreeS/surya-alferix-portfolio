@@ -1,8 +1,8 @@
 'use client'
 
-import { themes } from '@/appData'
+
 import useOutsideClick from '@/hooks/useOutsideClick'
-import { CheckIcon, CloseIcon } from '@/utils/icons'
+
 import { useEffect, useState } from 'react'
 
 const ThemeMenu = () => {
@@ -18,12 +18,12 @@ const ThemeMenu = () => {
     if (window) document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
 
-  const changeTheme = (theme: string) => {
-    if (window) {
-      setTheme(theme)
-      localStorage.setItem('theme', theme)
-    }
-  }
+  // const changeTheme = (theme: string) => {
+  //   if (window) {
+  //     setTheme(theme)
+  //     localStorage.setItem('theme', theme)
+  //   }
+  // }
 
   return (
     <div ref={menuRef} className="fixed right-6 bottom-4 z-50 md:right-11 md:bottom-11">

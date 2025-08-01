@@ -1,12 +1,12 @@
 // Data for portfolio
 import {
-  ExpressjsIcon,
+
   JavaScriptIcon,
-  NestjsIcon,
+
   NextjsIcon,
   NodejsIcon,
   ReactIcon,
-  SocketIcon,
+ 
   TailwindCSS,
   TypescriptIcon,
 } from '../utils/icons'

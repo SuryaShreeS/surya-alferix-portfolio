@@ -1,13 +1,10 @@
 'use client'
 import useRoleSwitcher from '@/hooks/useRoleSwitcher'
 import useRotatingAnimation from '@/hooks/useRotatingAnimation'
-import Image from 'next/image'
-import { HeroImage } from '../../utils/images'
-import Ellipse from './Ellipse'
+
 
 const Hero = () => {
-  const ellipseRef = useRotatingAnimation()
-  const role = useRoleSwitcher({ roles: ['FULLSTACK DEVELOPER', 'MOBILE APP DEVELOPER'] })
+ 
 
   return (
     <section className="bg-primary  min-h-[calc(dvh-4rem)] bg-no-repeat">

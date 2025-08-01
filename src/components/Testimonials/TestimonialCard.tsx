@@ -1,8 +1,7 @@
 import { Testimonial } from '@/lib/types'
-import { isInViewport } from '@/utils'
-import { StarIcon } from '@/utils/icons'
+
 import Image from 'next/image'
-import { FC, useEffect, useRef } from 'react'
+import { FC, useRef } from 'react'
 
 interface TestimonialCardProps {
   testimonial: Testimonial
@@ -11,7 +10,7 @@ interface TestimonialCardProps {
 }
 
 const TestimonialCard: FC<TestimonialCardProps> = ({
-  testimonial: { name, title, feedback, image, stars },
+  testimonial: { name, title, feedback, image },
   handleActiveCard,
   active = false, // <-- default value
 }) => {

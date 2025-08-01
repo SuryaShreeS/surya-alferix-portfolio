@@ -1,6 +1,3 @@
-import { footerLinks, languages } from '@/appData'
-
-import Logo from '../Navbar/Logo'
 
 const Footer = () => {
   return (
