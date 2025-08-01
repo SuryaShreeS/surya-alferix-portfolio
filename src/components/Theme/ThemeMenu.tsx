@@ -12,11 +12,12 @@ const ThemeMenu = () => {
 
   useEffect(() => {
     if (window) setTheme(localStorage.getItem('theme') ?? theme)
-  }, [])
+  }, [theme])
 
   useEffect(() => {
     if (window) document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
+console.log(showThemeMenu, 'showThemeMenu')
 
   // const changeTheme = (theme: string) => {
   //   if (window) {

@@ -1,6 +1,5 @@
 'use client'
-import useRoleSwitcher from '@/hooks/useRoleSwitcher'
-import useRotatingAnimation from '@/hooks/useRotatingAnimation'
+
 
 
 const Hero = () => {
