@@ -1,19 +1,19 @@
 export interface Project {
-  title: string
-  shortDescription: string
-  priority: number
-  cover: string
-  livePreview?: string
-  githubLink?: string
-  visitors?: string
-  earned?: string
-  githubStars?: string
-  ratings?: string
-  numberOfSales?: string
-  type?: string
-  siteAge?: string
- 
+  title: string;
+  shortDescription: string;
+  priority: number;
+  cover: string | StaticImageData; // Accept both string (URL) and StaticImageData
+  livePreview?: string;
+  githubLink?: string;
+  visitors?: string;
+  earned?: string;
+  githubStars?: string;
+  ratings?: string;
+  numberOfSales?: string;
+  type?: string;
+  siteAge?: string;
 }
+
 
 export interface Heading {
   id: string
