@@ -22,5 +22,5 @@ export interface Heading {
 }
 
 export interface Testimonial {
- name: string; title: string; feedback: string,image: string | StaticImageData;}
+ name: string; title: string; feedback: string}
 

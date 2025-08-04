@@ -1,22 +1,33 @@
 'use client'
 
-import action from '@/actions/contact-form'
-import { useActionState } from 'react'
+import { useRef } from 'react'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'
 
 const ContactForm = () => {
-  const [status, formAction, isPending] = useActionState(action, null)
+  const formRef = useRef<HTMLFormElement>(null)
 
-  if (status?.success) {
-    return (
-      <p className="text-accent self-center text-center text-2xl font-medium">{status.message}</p>
-    )
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const form = formRef.current
+    if (!form) return
+
+    const name = form.name.value
+    const email = form.email.value
+    const subject = form.subject.value || 'New Contact Form Submission'
+    const message = form.message.value
+
+    const mailtoLink = `mailto:someone@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`
+
+    window.location.href = mailtoLink
   }
 
   return (
-    <form action={formAction}>
+    <form ref={formRef} onSubmit={handleSubmit}>
       <Input label="Full name" id="name" name="name" placeholder="Your name here" required />
       <Input
         label="Email address"
@@ -35,8 +46,7 @@ const ContactForm = () => {
         rows={7}
         required
       />
-      {!status?.success && <p className="my-2 font-light text-red-600">{status?.message}</p>}
-      <Button text={isPending ? 'Submitting...' : 'Submit'} disabled={isPending} />
+      <Button text="Send via Email" />
     </form>
   )
 }

@@ -22,7 +22,7 @@ const TestimonialCard: FC<TestimonialCardProps> = ({
     <div
       ref={cardRef}
       onClick={handleActiveCard}
-      className={`bg-secondary border-border flex max-w-full shrink-0 flex-col items-center justify-between gap-4 rounded-2xl border p-4 text-center sm:max-w-[425px] cursor-pointer transition-shadow ${
+      className={`bg-secondary border-border flex max-w-[90%] shrink-0 flex-col items-center justify-between gap-4 rounded-2xl border p-4 text-center sm:max-w-[425px] cursor-pointer transition-shadow ${
         active ? 'border-accent shadow-lg' : ''
       }`}
       style={{ minHeight: 320 }} // set min height
