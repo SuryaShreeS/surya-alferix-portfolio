@@ -1,6 +1,6 @@
 import { Testimonial } from '@/lib/types'
 
-import Image from 'next/image'
+
 import { FC, useRef } from 'react'
 
 interface TestimonialCardProps {
