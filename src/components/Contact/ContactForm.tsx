@@ -14,7 +14,7 @@ const ContactForm = () => {
     const form = formRef.current
     if (!form) return
 
-    const name = form.name.value
+    const name = form.name.valueOf
     const email = form.email.value
     const subject = form.subject.value || 'New Contact Form Submission'
     const message = form.message.value

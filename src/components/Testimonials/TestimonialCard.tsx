@@ -10,7 +10,7 @@ interface TestimonialCardProps {
 }
 
 const TestimonialCard: FC<TestimonialCardProps> = ({
-  testimonial: { name, title, feedback, image },
+  testimonial: { name, title, feedback },
   handleActiveCard,
   active = false, // <-- default value
 }) => {
@@ -36,9 +36,7 @@ const TestimonialCard: FC<TestimonialCardProps> = ({
       <div>
        
         <div>
-          {image && (
-            <Image src={image} alt={name} width={50} height={50} className="mx-auto rounded-full" />
-          )}
+        
           <p className="text-neutral text-lg font-semibold">{name}</p>
           <p className="text-neutral/60 text-sm">{title}</p>
         </div>
