@@ -2,7 +2,7 @@
 import useRoleSwitcher from '@/hooks/useRoleSwitcher'
 import useRotatingAnimation from '@/hooks/useRotatingAnimation'
 import Image from 'next/image'
-import { HeroImage } from '../../utils/images'
+
 import Ellipse from './Ellipse'
 import MyProfile from '../../app/profile.jpeg'
 
