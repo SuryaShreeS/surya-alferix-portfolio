@@ -4,6 +4,7 @@ import useRotatingAnimation from '@/hooks/useRotatingAnimation'
 import Image from 'next/image'
 import { HeroImage } from '../../utils/images'
 import Ellipse from './Ellipse'
+import MyProfile from '../../app/profile.jpeg'
 
 const Hero = () => {
   const ellipseRef = useRotatingAnimation()
@@ -45,14 +46,15 @@ const Hero = () => {
 
         <div className="flex min-h-[18.75rem] items-center justify-center lg:min-h-[35rem]">
           <div className="text-accent relative size-56 sm:size-60 md:size-[20rem] lg:size-[25.75rem]">
-            <Image
-              src={HeroImage}
-              fill={true}
-              priority={true}
-              sizes="(min-width: 1024px) 25.75rem, (min-width: 768px) 20rem, (min-width: 640px) 15rem, 14rem"
-              alt="John Doe - Full Stack Developer"
-              className="object-contain p-7"
-            />
+           <Image
+  src={MyProfile}
+  fill={true}
+  priority={true}
+  sizes="(min-width: 1024px) 25.75rem, (min-width: 768px) 20rem, (min-width: 640px) 15rem, 14rem"
+  alt="John Doe - Full Stack Developer"
+  className="object-contain p-7 rounded-full"
+/>
+
             <Ellipse
               ref={ellipseRef}
               className="absolute top-0 left-0 size-56 transition-transform duration-500 ease-out sm:size-60 md:size-[20rem] lg:size-[25.75rem]"
